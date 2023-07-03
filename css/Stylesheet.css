@@ -117,7 +117,7 @@ h1.load::before{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: fixed;
+        position: initial;
         top: 0;
         right: 0%;
         left: 0;
@@ -264,12 +264,11 @@ h1.load::before{
 
 /* Slides Images Start */
 .slides{
-    width: 100%;
+    width: auto;
     height: 100vh;
     margin-top: 2rem; padding-top: 2rem;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .swiper{
@@ -519,7 +518,6 @@ div.para{
     border: 2px solid var(--Soft-Blue);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
-    min-width: 186px;
     text-align: left;
     padding-left: 2rem;
     width: 23vw;
