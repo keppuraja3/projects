@@ -522,6 +522,7 @@ div.para{
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     text-align: left;
+    min-width: 200px;
     padding-left: 2rem;
     width: 23vw;
 }
