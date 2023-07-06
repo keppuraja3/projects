@@ -117,7 +117,7 @@ h1.load::before{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: initial;
+        position: fixed;
         top: 0;
         right: 0%;
         left: 0;
@@ -138,38 +138,29 @@ h1.load::before{
 
 .header .navbar a:hover{
     color: rgb(0, 179, 255);
+    font-weight: 900;
+}
+.header a .active{
+    font-weight: 900;
 }
 
 .btn{
     padding: .6rem 3rem;
     background-color: rgb(0, 255, 64);
     color: rgb(255, 255, 255);
+    font-weight: 700;
     border-radius: .5rem;
+    border: 2px solid #000;
     margin: 0.5rem;
 }
 
 .btn:hover{
-    color: red;
-    font-weight: 700;
+    color: #000;
+    font-weight: 800;
     background-color: transparent;
     border: 2px solid red;
 }
-.bttn{
-    padding: .6rem 3rem;
-    width: 100%;
-    background-color: rgb(0, 154, 255);
-    color: rgb(255, 255, 255);
-    border-radius: .5rem;
-    font-weight: 400;
-    margin: 0.5rem;
-}
 
-.bttn:hover{
-    color: rgb(0, 0, 0);
-    font-weight: 700;
-    background-color: transparent;
-    border: 2px solid rgb(0, 81, 255);
-}
 #menu-btn{
     padding: 1rem 1rem;
     background-color: #eee;
@@ -190,7 +181,8 @@ h1.load::before{
 
 
 .gimg{
-    margin: 2rem; padding: 2rem;
+    margin-top: 13rem; padding: 2rem;
+    margin-left: 5rem;
     float: left;
     text-align: center;
     justify-content: center;
@@ -199,6 +191,7 @@ h1.load::before{
 
 .buyform{
     margin-top: 10rem;
+    margin-bottom: 20rem;
     float: right; padding: 2rem;
     background-color: #efe149;
     width: 55vw;
@@ -208,11 +201,18 @@ h1.load::before{
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 43rem;
+    height: auto;
     border: 2px solid #000;
 }
 
-.buyform input{margin: 2rem; padding: .5rem; border-radius: 1rem;}
+.buyform span{
+    text-align: center;
+    color: #000;
+    font-style: none;
+    font-size: 25px;
+}
+
+.buyform input{margin: 2rem; padding: 1rem; border-radius: 1rem; border: 1px solid #000;}
 
  /*Media Queries */
 
@@ -229,7 +229,6 @@ h1.load::before{
     #menu-btn{
         display: initial;
     }
-
     .header .navbar{
         position: absolute;
         top: 50%;
@@ -242,11 +241,9 @@ h1.load::before{
         transform: scale(0);
         transform-origin: top right;
     }
-
     .header .navbar.active{
         transform: scale(1);
     }
-
     .header .navbar a{
         margin: 2.5rem;
         text-align: center;
@@ -254,9 +251,10 @@ h1.load::before{
         font-size: 2rem;
     }
 }
-
-@media (max-width: 450px){
-    html{
+@media (max-width: 450px)
+{
+    html
+    {
         font-size: 50%;
     }
 }
@@ -264,41 +262,35 @@ h1.load::before{
 
 /* Slides Images Start */
 .slides{
-    width: auto;
+    width: 100%;
     height: 100vh;
     margin-top: 2rem; padding-top: 2rem;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
 .swiper{
     width: 90%;
     height: fit-content;
 }
-
 .swiper-slide img{
     width: 100%;
 }
 .swiper .swiper-button-prev, .swiper .swiper-button-next{
     color: #fff;
 }
-
 .swiper .swiper-pagination-bullet-active{
     background: #fff;
 }
 /* Slides Images End/ */
 
 /* Gallery Images Start */
-
-
-
 .banner{
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
 }
-
 .banner img{
     padding: 5px 6px 5px 6px;
     height: 490px;
@@ -318,7 +310,7 @@ h1.load::before{
     height: 120vh;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
     background: rgb(255, 255, 255);
 }
 .main span{
@@ -370,7 +362,7 @@ h1.load::before{
     color: #e9569f;
 }
 .lns:hover{
-    background: #ee72be;
+    background: linear-gradient(225deg, rgba(255, 19, 228, 1)9%, rgb(255, 145, 105, 1)73%, rgb(255, 253, 0, 1)100%);
     color: #fff;
     outline-color: #eee;
 }
@@ -424,25 +416,28 @@ div.para{
     padding: 1rem;
     display: grid;
     border-radius: 9rem 0;
-    background-color: #67baee;
     grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
-}
-
-.owner img{
+} 
+.owner img{ 
     margin: 20px;
     width: 200px;
-    height: 200px; 
+    height: 200px;
     border-radius: 8px;
     box-shadow: .5rem .5rem  0 hsla(60, 2%, 11%, 0.531);
 }
 
 .ownerinfo{
     text-align: center;
+    border-radius: 2rem;
+    background: #1ec9efba;
 }
-
-.owner .ownerinfo img:hover {
+.owner .ownerinfo img:hover{
     transform: rotate(10deg);
 }
+.ownerinfo h3{
+    margin-bottom: 2rem;
+}
+
 /* owner info */
 
 /* terms home page */
@@ -468,6 +463,10 @@ div.para{
     margin-left: -15px;
 }
 
+.box-container{
+    margin-top: 2rem;
+}
+
 .footer .box-container .box h3{
     font-size: 2.5rem;
     color:var(--black);
@@ -491,7 +490,7 @@ div.para{
 }
 
 
-.footer .credit{
+.footer{
     background-origin: auto;
     padding: 1rem;
     padding-top: 2rem;
@@ -503,7 +502,7 @@ div.para{
 }
 
 
-.footer .credit span{
+.footer span{
     color: red;
     cursor: pointer;
 }
@@ -522,7 +521,6 @@ div.para{
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     text-align: left;
-    min-width: 200px;
     padding-left: 2rem;
     width: 23vw;
 }
@@ -560,7 +558,7 @@ div.para{
     border: 2px solid rgba(0, 0, 0, 0.216);
     border-radius: 5rem;
     text-align: left;
-    padding-left: 2rem;   
+    padding-left: 2rem;
 }
 
 .pp{
