@@ -525,6 +525,12 @@ div.para{
     width: 23vw;
 }
 
+@media (max-width: 760px){
+    .box{
+        min-width: 76%;
+    }
+}
+
 .box:hover{
     border: 2px solid var(--Soft-Blue);
     box-shadow: none;
