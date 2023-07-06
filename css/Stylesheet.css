@@ -232,8 +232,8 @@ h1.load::before{
 
     .header .navbar{
         position: absolute;
-        top: 115%;
-        right: 2rem;
+        top: 50%;
+        left: 40%;
         box-shadow: var(--box-shadow);
         width: 33rem;
         border-radius: .5rem;
